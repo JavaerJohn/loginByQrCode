@@ -2,7 +2,7 @@
 
 ## 📖原理解析
 
-详见[Java 语言实现简易版扫码登录](https://www.cnblogs.com/johnlearning/p/16205875.html)。
+详见 [Java 语言实现简易版扫码登录](https://www.cnblogs.com/johnlearning/p/16205875.html)。
 
 ## 🔨 环境准备
 
