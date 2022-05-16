@@ -54,24 +54,24 @@ void loginByPhone() {
 
 启动项目，访问 `localhost:8080/index`：
 
-![](https://img2022.cnblogs.com/blog/2430605/202204/2430605-20220429105956266-1392136789.jpg)
+![](https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/demo/loginByQrCode/index.jpg)
 
 点击登录，并在开发者工具中找到二维码 id（uuid）：
 
-![](https://img2022.cnblogs.com/blog/2430605/202204/2430605-20220429110009062-1010129683.jpg)
+![](https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/demo/loginByQrCode/uuid.jpg)
 
 打开 Postman，发送 `localhost:8080/login/scan` 请求，Query 参数中携带 uuid，Header 中携带手机端 token：
 
-![](https://img2022.cnblogs.com/blog/2430605/202204/2430605-20220429110028157-315924366.jpg)
+![](https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/demo/loginByQrCode/扫码请求.jpg)
 
 上述请求返回 "扫码成功" 的响应，同时还返回了一次性 token。此时 PC 端显示出扫码用户的头像：
 
-![](https://img2022.cnblogs.com/blog/2430605/202204/2430605-20220429110043658-132579133.jpg)
+![](https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/demo/loginByQrCode/待确认.jpg)
 
 在 Postman 中发送 `localhost:8080/login/confirm` 请求，Query 参数中携带 uuid，Header 中携带一次性 token：
 
-![](https://img2022.cnblogs.com/blog/2430605/202204/2430605-20220429110055973-25200175.jpg)
+![](https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/demo/loginByQrCode/确认请求.jpg)
 
 "确认登录" 请求发送完成后，PC 端随即获取到 PC 端 token，并成功查询用户信息：
 
-![](https://img2022.cnblogs.com/blog/2430605/202204/2430605-20220429110106186-2121298525.jpg)
+![](https://johnlearning.oss-cn-beijing.aliyuncs.com/blog/demo/loginByQrCode/登录成功.jpg)
